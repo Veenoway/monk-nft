@@ -115,7 +115,7 @@ export function UserNFTs() {
                     {!nft.metadata && (
                       <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                         <div className="text-yellow-300 animate-pulse">
-                          Loading...
+                          LOADING...
                         </div>
                       </div>
                     )}
@@ -135,7 +135,7 @@ export function UserNFTs() {
           {isLoadingNFTs ? (
             <div className="flex flex-col items-center">
               <p className="text-[rgba(255,255,255,0.7)] text-xl">
-                Loading your NFTs...
+                LOADING YOUR NFTs...
               </p>
             </div>
           ) : (
