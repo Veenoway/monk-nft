@@ -16,7 +16,7 @@ export default {
         secondary: "#120621",
         terciary: "#1E1330",
         borderColor: "#251936",
-        brandColor: "#5D00BA",
+        brandColor: "#6263A6",
       },
       height: {
         "calc-header-screen": "calc(100vh - 90px)",
