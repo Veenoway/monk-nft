@@ -34,7 +34,7 @@ export function UserNFTs() {
     return (
       <div className="mt-10">
         <h2 className="text-3xl sm:text-6xl font-bold text-white mb-4">
-          My NFTs (0)
+          MY NFTS (0)
         </h2>
         <div className="h-48 flex items-center justify-center">
           <p className="text-[rgba(255,255,255,1)] uppercase text-xl sm:text-3xl">
