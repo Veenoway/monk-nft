@@ -322,7 +322,7 @@ export function useNFT() {
           return {
             tokenId,
             metadataId: metadataIds[i],
-            tokenURI: tokenURIs[i]?.split(".json")[0] || "",
+            tokenURI: tokenURIs[i] || "",
             metadata: existingNFT?.metadata,
             normalizedImage: existingNFT?.normalizedImage || "/preview.gif",
           };
@@ -400,11 +400,11 @@ export function useNFT() {
       }
       case "First Come First Served": {
         setMintPrice(BigInt(10 * 10 ** 18));
-        return BigInt(10 * 10 ** 18);
+        return BigInt(3 * 10 ** 18);
       }
       case "Public Mint": {
         setMintPrice(BigInt(100 * 10 ** 18));
-        return BigInt(100 * 10 ** 18);
+        return BigInt(50 * 10 ** 18);
       }
       default:
         return BigInt(0);
