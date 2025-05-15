@@ -265,7 +265,7 @@ export function NFT() {
     <>
       {showInfoPopup && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
-          <div className="bg-[#36006b] border border-[rgba(255,255,255,0.1)] rounded-lg max-w-md w-[90%] p-6 shadow-xl">
+          <div className="bg-brandColor border border-[rgba(255,255,255,0.1)] rounded-lg max-w-md w-[90%] p-6 shadow-xl">
             <div className="flex justify-between items-start mb-4">
               <h2 className="text-2xl sm:text-4xl font-bold text-white uppercase">
                 Collection Privacy
@@ -331,7 +331,7 @@ export function NFT() {
       >
         <div className="max-w-[1100px] w-[90%] mx-auto mt-[100px] lg:mt-[200px] flex lg:flex-row flex-col items-center lg:justify-between">
           <img
-            src="/spiky/spike_it_up.gif"
+            src="/preview.gif"
             className="lg:h-[500px] lg:w-[500px] lg:mr-5 bg-secondary rounded-[10px]"
             alt="Spikynads Chad logo"
             style={{
