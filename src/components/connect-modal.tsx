@@ -18,7 +18,7 @@ export const WalletModal: FC<
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent
         close={() => setOpen(false)}
-        className="sm:max-w-[490px] text-white px-10 py-8 rounded-xl bg-[#36006b] border border-[rgba(255,255,255,0.1)]"
+        className="sm:max-w-[650px] text-white px-10 py-8 rounded-xl bg-brandColor border border-[rgba(255,255,255,0.1)]"
       >
         <DialogHeader>
           <DialogTitle className="text-4xl mb-3 text-white uppercase">
@@ -36,7 +36,7 @@ export const WalletModal: FC<
                 connect({ connector });
                 setOpen(false);
               }}
-              className=" bg-brandColor hover:bg-brandColor/70 flex items-center justify-center uppercase border border-[rgba(255,255,255,0.1)] rounded h-[50px] px-2 font-medium text-xl"
+              className=" bg-[#9DA1E4] hover:bg-[#9DA1E4]/70 flex items-center justify-center uppercase border border-[rgba(255,255,255,0.1)] rounded h-[66px] px-2 font-medium text-xl"
             >
               <img
                 src={connector.icon}

@@ -467,7 +467,7 @@ export function NFT() {
                   ></div>
                 </div>
                 <div className="flex justify-between items-center mt-2">
-                  <span className="text-lg text-gray-400 uppercase">
+                  <span className="text-lg text-gray-200 uppercase">
                     Total minted
                   </span>
                   <span className="text-lg font-medium text-white">

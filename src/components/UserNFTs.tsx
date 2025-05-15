@@ -49,7 +49,7 @@ export function UserNFTs() {
     <div className="mt-10">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-3xl sm:text-6xl font-bold text-white uppercase">
-          MY NFT ({userNFTs.length || 0})
+          MY NFTS ({userNFTs.length || 0})
         </h2>
         <div className="flex items-center gap-3">
           <button
