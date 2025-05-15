@@ -12,8 +12,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Spikes Mint | Spikynads",
-  description: "Mint your Spikynads NFTs on the Monad testnet.",
+  title: "Lil Monks Mint | Monks",
+  description: "Mint your Lil Monks NFTs on Monad testnet.",
 };
 
 export default async function RootLayout({

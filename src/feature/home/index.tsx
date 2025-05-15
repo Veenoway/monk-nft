@@ -6,71 +6,71 @@ import { useEffect, useRef, useState } from "react";
 import { useAccount, useSwitchChain } from "wagmi";
 
 // Composant de compte à rebours
-function CountdownTimer({ currentPhase }: { currentPhase?: string }) {
-  const [timeRemaining, setTimeRemaining] = useState<{
-    days: number;
-    hours: number;
-    minutes: number;
-    seconds: number;
-  }>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+// function CountdownTimer({ currentPhase }: { currentPhase?: string }) {
+//   const [timeRemaining, setTimeRemaining] = useState<{
+//     days: number;
+//     hours: number;
+//     minutes: number;
+//     seconds: number;
+//   }>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
-  useEffect(() => {
-    const getTargetDate = () => {
-      const whitelistEndDate = new Date("2025-04-04T13:00:00Z");
+//   useEffect(() => {
+//     const getTargetDate = () => {
+//       const whitelistEndDate = new Date("2025-04-04T13:00:00Z");
 
-      const fcfsEndDate = new Date("2025-04-05T13:00:00Z");
+//       const fcfsEndDate = new Date("2025-04-05T13:00:00Z");
 
-      if (currentPhase === "Whitelist" || currentPhase === "OG_SALE") {
-        return whitelistEndDate;
-      } else if (currentPhase === "First Come First Served") {
-        return fcfsEndDate;
-      }
+//       if (currentPhase === "Whitelist" || currentPhase === "OG_SALE") {
+//         return whitelistEndDate;
+//       } else if (currentPhase === "First Come First Served") {
+//         return fcfsEndDate;
+//       }
 
-      return whitelistEndDate;
-    };
+//       return whitelistEndDate;
+//     };
 
-    const calculateTimeRemaining = () => {
-      const targetDate = getTargetDate();
-      const now = new Date();
-      const difference = targetDate.getTime() - now.getTime();
+//     const calculateTimeRemaining = () => {
+//       const targetDate = getTargetDate();
+//       const now = new Date();
+//       const difference = targetDate.getTime() - now.getTime();
 
-      if (difference <= 0) {
-        return { days: 0, hours: 0, minutes: 0, seconds: 0 };
-      }
+//       if (difference <= 0) {
+//         return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+//       }
 
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+//       const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+//       const hours = Math.floor(
+//         (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+//       );
+//       const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+//       const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-      return { days, hours, minutes, seconds };
-    };
+//       return { days, hours, minutes, seconds };
+//     };
 
-    const timer = setInterval(() => {
-      setTimeRemaining(calculateTimeRemaining());
-    }, 1000);
+//     const timer = setInterval(() => {
+//       setTimeRemaining(calculateTimeRemaining());
+//     }, 1000);
 
-    setTimeRemaining(calculateTimeRemaining());
+//     setTimeRemaining(calculateTimeRemaining());
 
-    return () => clearInterval(timer);
-  }, [currentPhase]);
+//     return () => clearInterval(timer);
+//   }, [currentPhase]);
 
-  const formatNumber = (num: number) => (num < 10 ? `0${num}` : num);
+//   const formatNumber = (num: number) => (num < 10 ? `0${num}` : num);
 
-  return (
-    <div className="flex items-center gap-1 sm:gap-2 uppercase">
-      {timeRemaining.days > 0 && <span>{timeRemaining.days}d</span>}
-      <span>{formatNumber(timeRemaining.hours)}h</span>
-      <span>{formatNumber(timeRemaining.minutes)}m</span>
-      <span>{formatNumber(timeRemaining.seconds)}s</span>
-    </div>
-  );
-}
+//   return (
+//     <div className="flex items-center gap-1 sm:gap-2 uppercase">
+//       {timeRemaining.days > 0 && <span>{timeRemaining.days}d</span>}
+//       <span>{formatNumber(timeRemaining.hours)}h</span>
+//       <span>{formatNumber(timeRemaining.minutes)}m</span>
+//       <span>{formatNumber(timeRemaining.seconds)}s</span>
+//     </div>
+//   );
+// }
 
 export function NFT() {
-  const { address, chainId } = useAccount();
+  const { address, chainId, isDisconnected } = useAccount();
   const { switchChainAsync } = useSwitchChain();
   const isWrongNetwork = chainId !== 10143;
   const [open, setOpen] = useState(false);
@@ -339,12 +339,12 @@ export function NFT() {
             }}
           />
           <div className="max-w-[510px] flex flex-col lg:items-start items-center text-white font-medium text-xl lg:mt-0 mt-10">
-            <h1 className="text-3xl text-center uppercase lg:text-start lg:text-8xl lg:leading-[70px] text-white font-bold">
-              MONKS
+            <h1 className="text-3xl text-center uppercase lg:text-start lg:text-7xl lg:leading-[70px] text-white font-bold">
+              LIL MONKS
             </h1>
-            <p className="text-[rgba(255,255,255,0.8)] text-center sm:text-start uppercase font-thin mt-4 mb-3 text-lg sm:text-2xl">
-              Every Spiky Nad carries countless Spikes, each with its own
-              personality, poking around for no reason.
+            <p className="text-[rgba(255,255,255,0.9)] text-center sm:text-start uppercase font-thin mt-4 mb-3 text-lg sm:text-2xl">
+              EVERY LIL MONK CARRY AND UNLIMITED AMOUNT OF POWER, USE IT WISELY.
+              DON&apos;T WAIT FOR TOMORROW, OWN YOUR FUTURE TODAY.
             </p>
 
             {address && isWrongNetwork ? (
@@ -402,7 +402,7 @@ export function NFT() {
                       {mintingStep === "success" && (
                         <div className="flex items-center gap-2">Success!</div>
                       )}
-                      {mintingStep === "idle" && "Mint Spikes"}
+                      {mintingStep === "idle" && "Mint Monk"}
                     </button>
                   </div>
                 ) : (
@@ -429,7 +429,9 @@ export function NFT() {
                     } h-3 w-3 mr-3`}
                   />
 
-                  {isUserTeam
+                  {isDisconnected
+                    ? "NOT CONNECTED"
+                    : isUserTeam
                     ? "ELIGIBLE TEAM"
                     : isUserWL
                     ? "ELIGIBLE WL"
@@ -486,13 +488,13 @@ export function NFT() {
                         : "Loading..."}
                     </span>
                   </p>
-                  <p className="text-white font-bold text-lg sm:text-[22px] uppercase">
+                  {/* <p className="text-white font-bold text-lg sm:text-[22px] uppercase">
                     {!isSoldOut && (
                       <CountdownTimer
                         currentPhase={mintPhaseInfo?.currentPhase}
                       />
                     )}
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
