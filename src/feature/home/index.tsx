@@ -343,7 +343,7 @@ export function NFT() {
               LIL MONKS
             </h1>
             <p className="text-[rgba(255,255,255,0.9)] text-center sm:text-start uppercase font-thin mt-4 mb-3 text-lg sm:text-2xl">
-              EVERY LIL MONK CARRY AND UNLIMITED AMOUNT OF POWER, USE IT WISELY.
+              EVERY LIL MONK CARRY AN UNLIMITED AMOUNT OF POWER, USE IT WISELY.
               DON&apos;T WAIT FOR TOMORROW, OWN YOUR FUTURE TODAY.
             </p>
 
