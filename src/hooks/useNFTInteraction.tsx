@@ -206,7 +206,7 @@ export function useNFT() {
         if (!data || typeof data !== "object") {
           throw new Error("Invalid metadata format");
         }
-
+        console.log("dataaaaaaa", data);
         // Extract and normalize image URL
         const imageUrl = data.image || "/placeholder-nft.png";
 
@@ -249,10 +249,10 @@ export function useNFT() {
         return createDefaultMetadata(nft);
       }
     });
-
+    console.log("user", userNFTs);
     // Use Promise.allSettled to handle errors gracefully
     const results = await Promise.allSettled(metadataPromises);
-
+    console.log("results", results);
     // Extract successful results
     const metadata = results
       .filter(
@@ -322,7 +322,7 @@ export function useNFT() {
           return {
             tokenId,
             metadataId: metadataIds[i],
-            tokenURI: tokenURIs[i] || "",
+            tokenURI: tokenURIs[i]?.split(".json")[0] || "",
             metadata: existingNFT?.metadata,
             normalizedImage:
               existingNFT?.normalizedImage || "/placeholder-nft.png",
