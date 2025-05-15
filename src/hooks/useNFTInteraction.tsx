@@ -399,11 +399,11 @@ export function useNFT() {
         return BigInt(1 * 10 ** 18);
       }
       case "First Come First Served": {
-        setMintPrice(BigInt(10 * 10 ** 18));
+        setMintPrice(BigInt(3 * 10 ** 18));
         return BigInt(3 * 10 ** 18);
       }
       case "Public Mint": {
-        setMintPrice(BigInt(100 * 10 ** 18));
+        setMintPrice(BigInt(50 * 10 ** 18));
         return BigInt(50 * 10 ** 18);
       }
       default:
