@@ -1,5 +1,5 @@
 export const NFT_ADDRESS =
-  "0x8Ec36F3fD09d42060620f9A9B88c12c12edD40a5" as const;
+  "0x2dC19dD28267a5415aBCE9b186Ef15459461849E" as const;
 
 export const NFT_ABI = [
   {

@@ -130,9 +130,9 @@ export function useNFT() {
     return {
       tokenId: nft.tokenId,
       metadataId: nft.metadataId,
-      name: `NFT #${nft.tokenId.toString()}`,
+      name: `LIL MONK #${nft.tokenId.toString()}`,
       description: "Metadata unavailable",
-      image: "/placeholder-nft.png",
+      image: "/preview.gif",
       attributes: [],
     };
   };
@@ -208,7 +208,7 @@ export function useNFT() {
         }
         console.log("dataaaaaaa", data);
         // Extract and normalize image URL
-        const imageUrl = data.image || "/placeholder-nft.png";
+        const imageUrl = data.image || "/preview.gif";
 
         // Normalize image URL if it's IPFS
         let normalizedImageUrl = imageUrl;
@@ -324,8 +324,7 @@ export function useNFT() {
             metadataId: metadataIds[i],
             tokenURI: tokenURIs[i]?.split(".json")[0] || "",
             metadata: existingNFT?.metadata,
-            normalizedImage:
-              existingNFT?.normalizedImage || "/placeholder-nft.png",
+            normalizedImage: existingNFT?.normalizedImage || "/preview.gif",
           };
         }
       );
